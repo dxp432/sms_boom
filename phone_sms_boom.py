@@ -720,7 +720,7 @@ if __name__ == '__main__':
     while 1 == 1:
         my_time = datetime.datetime.now()
         # 定时
-        if (my_time.hour == 7) or (my_time.hour == 15):
+        if (my_time.hour == 18) or (my_time.hour == 15):
 
             print('-----开始-----' + str(datetime.datetime.now()))
 
