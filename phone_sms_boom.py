@@ -27,7 +27,7 @@ def slip_pic(x, y, x_1, y_1):
     my_x_1_half = (x_1 - x)
     # my_x_2 = x + my_x_1_half
     # my_x_3 = x + my_x_1_half + my_x_1_half
-    print(math.ceil(float(my_x_1_half)))
+    # print(math.ceil(float(my_x_1_half)))
     ctypes.windll.user32.SetCursorPos(x, y)
     ctypes.windll.user32.mouse_event(2, 0, 0, 0, 0)
     time.sleep(1)
@@ -427,17 +427,17 @@ def my_22_sms(my_phone_num):
     for my_index in range(1, 6, 1):
         my_find_x_f = get_find_x()
         if my_find_x_f == 0:
-            print('my_find_x_f is 0')
+            # print('my_find_x_f is 0')
             # 点击刷新
             click(1075, 712)
             time.sleep(2)
         else:
-            print(my_find_x_f)
+            # print(my_find_x_f)
             my_int = 849 + 52 + math.ceil(float(my_find_x_f))
             slip_pic(849, 666, int(my_int), 666)
-            print('滑动了，跳出循环')
+            # print('滑动了，跳出循环')
             break
-    print('已经跳出循环')
+    # print('已经跳出循环')
     # 关闭浏览器窗口
     ctrl_w()
 
@@ -461,29 +461,29 @@ def get_find_x():
     find_x = 0
     try:
         if matchImg('yzm_screencap.png', '1.png') is not None:
-            print("1！")
+            # print("1！")
             find_x = str(matchImg('yzm_screencap.png', '1.png')['result'][0])
         elif matchImg('yzm_screencap.png', '2.png') is not None:
-            print("2！")
+            # print("2！")
             find_x = str(matchImg('yzm_screencap.png', '2.png')['result'][0])
         elif matchImg('yzm_screencap.png', '3.png') is not None:
-            print("3！")
+            # print("3！")
             find_x = str(matchImg('yzm_screencap.png', '3.png')['result'][0])
         elif matchImg('yzm_screencap.png', '4.png') is not None:
-            print("4！")
+            # print("4！")
             find_x = str(matchImg('yzm_screencap.png', '4.png')['result'][0])
         elif matchImg('yzm_screencap.png', '5.png') is not None:
-            print("5！")
+            # print("5！")
             find_x = str(matchImg('yzm_screencap.png', '5.png')['result'][0])
         elif matchImg('yzm_screencap.png', '6.png') is not None:
-            print("6！")
+            # print("6！")
             find_x = str(matchImg('yzm_screencap.png', '6.png')['result'][0])
         elif matchImg('yzm_screencap.png', '7.png') is not None:
-            print("7！")
+            # print("7！")
             find_x = str(matchImg('yzm_screencap.png', '7.png')['result'][0])
         else:
             find_x = 0
-            print('没有匹配,find_x is :' + str(find_x))
+            # print('没有匹配,find_x is :' + str(find_x))
     except Exception as e:
         print(e)
         print("这里有个异常")
@@ -596,17 +596,17 @@ def sogou_sms(my_phone_num):
     for my_index in range(1, 6, 1):
         my_find_x_f = get_find_x()
         if my_find_x_f == 0:
-            print('my_find_x_f is 0')
+            # print('my_find_x_f is 0')
             # 点击刷新
             click(1075, 712)
             time.sleep(2)
         else:
-            print(my_find_x_f)
+            # print(my_find_x_f)
             my_int = 849 + 52 + math.ceil(float(my_find_x_f))
             slip_pic(849, 666, int(my_int), 666)
-            print('滑动了，跳出循环')
+            # print('滑动了，跳出循环')
             break
-    print('已经跳出循环')
+    # print('已经跳出循环')
     # 关闭浏览器窗口
     ctrl_w()
 
@@ -665,17 +665,17 @@ def eoemarket_sms(my_phone_num):
     for my_index in range(1, 6, 1):
         my_find_x_f = get_find_x()
         if my_find_x_f == 0:
-            print('my_find_x_f is 0')
+            # print('my_find_x_f is 0')
             # 点击刷新
             click(1075, 712)
             time.sleep(2)
         else:
-            print(my_find_x_f)
+            # print(my_find_x_f)
             my_int = 849 + 52 + math.ceil(float(my_find_x_f))
             slip_pic(849, 666, int(my_int), 666)
-            print('滑动了，跳出循环')
+            # print('滑动了，跳出循环')
             break
-    print('已经跳出循环')
+    # print('已经跳出循环')
     # 关闭浏览器窗口
     ctrl_w()
 
@@ -712,24 +712,19 @@ if __name__ == '__main__':
     # 手机号
     my_phone = input("请输入手机号(然后回车):")
 
-
     # 打开浏览器的一个窗口，始终保持有一个窗口，就不怕chrome就被关闭了。
     # web_open('http://www.hao123.com')
     my_time = datetime.datetime.now()
 
     while 1 == 1:
         my_time = datetime.datetime.now()
+        # print(my_time)
         # 定时
-        if (my_time.hour == 18) or (my_time.hour == 15):
+        if 1 == 1:
+        # if (my_time.hour == 7) or (my_time.hour == 22) or (my_time.hour == 33) or (my_time.hour == 44)\
+        #         or (my_time.hour == 55):
 
             print('-----开始-----' + str(datetime.datetime.now()))
-
-            # 豆瓣
-            # 迅雷13988715878
-            # 优酷
-            # 新浪注册
-            # 华军软件园
-            # 中华英才网
 
             # 我爱我家
             web_open('https://bj.5i5j.com/')
@@ -768,7 +763,6 @@ if __name__ == '__main__':
 
             web_open('https://mall.sogou.com/register')
             sogou_sms(my_phone)
-
 
             # acfun 注册
             web_open('https://www.acfun.cn/reg/')
@@ -851,8 +845,8 @@ if __name__ == '__main__':
             web_open('https://id.163yun.com/register')
             yun163_sms(my_phone)
 
-            time.sleep(30)
+            time.sleep(120)
         else:
 
             print('不是指定时间，等待....' + str(datetime.datetime.now()))
-            time.sleep(60 * 5)
+            time.sleep(120)
